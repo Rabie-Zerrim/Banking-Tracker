@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="605.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controles.AjouterTodo">
+   <children>
+
+      <TextField fx:id="desctask" layoutX="263.0" layoutY="145.0" prefHeight="30.0" prefWidth="226.0" promptText="Enter task description" />
+      <Button layoutX="667.0" layoutY="533.0" mnemonicParsing="false" onAction="#addtask" text="Add" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+      <DatePicker fx:id="duedate" layoutX="263.0" layoutY="241.0" prefHeight="26.0" prefWidth="226.0" />
+      <SplitPane layoutX="-2.0" prefHeight="607.0" prefWidth="214.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="614.0" prefWidth="213.0" style="-fx-background-color: #2B2B2B;">
+               <children>
+                  <Label layoutX="114.0" layoutY="161.0" text="Description" style="-fx-text-fill: white;" />
+                  <Label layoutX="127.0" layoutY="200.0" text="Priority" style="-fx-text-fill: white;" />
+                  <Label layoutX="122.0" layoutY="243.0" text="Due Date" style="-fx-text-fill: white;" />
+                  <Label layoutX="128.0" layoutY="389.0" text="Status" style="-fx-text-fill: white;" />
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="115.0" text="To Do List" style="-fx-text-fill: #31ae1e;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="121.0" layoutY="292.0" text="Category" style="-fx-text-fill: white;" />
+                  <Label layoutX="118.0" layoutY="337.0" text="To Do List" style="-fx-text-fill: white;" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <Label layoutX="422.0" layoutY="28.0" prefHeight="30.0" prefWidth="179.0" text="Add Task" textAlignment="CENTER" textFill="#31ae1e">
+         <font>
+            <Font name="System Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <JFXCheckBox fx:id="statusTask" layoutX="344.0" layoutY="371.0" prefHeight="42.0" prefWidth="156.0" text="Done" textAlignment="CENTER" />
+      <JFXComboBox fx:id="Subcat" layoutX="261.0" layoutY="282.0" prefHeight="28.0" prefWidth="234.0" promptText="Select category" />
+      <JFXComboBox fx:id="TodoList" layoutX="259.0" layoutY="326.0" prefHeight="28.0" prefWidth="234.0" promptText="Select to-do list" />
+      <JFXComboBox fx:id="priority" layoutX="263.0" layoutY="184.0" prefHeight="28.0" prefWidth="234.0" promptText="Select priority" />
+   </children>
+</AnchorPane>
